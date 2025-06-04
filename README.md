@@ -21,7 +21,7 @@
 
 | Contract | Description | Purpose |
 |----------|-------------|---------|
-| **`BFSwapEscrowV1.2.sol`** | Main escrow contract | Handles swap creation, execution, and state management |
+| **`OTCEscrowV1point2.sol`** | Main escrow contract | Handles swap creation, execution, and state management |
 | **`xUUPSSwapLib.sol`** | Market analysis lib | Price discovery & token analytics |
 
 ### Key Features
@@ -108,7 +108,7 @@ forge test --gas-report
 
 ```
 ├── contracts/           # 📜 Main contracts (more visible)
-│   ├── BFSwapEscrowV1.2.sol
+│   ├── OTCEscrowV1point2.sol
 │   └── xUUPSSwapLib.sol
 ├── src/                # 🔧 Foundry source (for compilation)
 ├── test/               # 🧪 Comprehensive test suite
@@ -130,8 +130,8 @@ forge test --gas-report
 
 ### BasedBrains Ecosystem
 - **Brain Token Trading**: Specialized marketplace for ecosystem tokens
-- **Community Incentives**: Fee-free trading encourages participation
-- **Price Discovery**: Real-time market data for brain tokens
+- **Community Incentives**: Fee-free trading
+- **Price Discovery**: Realtime market data for brain tokens
 
 ---
 
@@ -149,48 +149,7 @@ ETHERSCAN_API_KEY=your_etherscan_key
 ### Foundry Configuration
 The project uses optimized compiler settings:
 - Solidity 0.8.26
-- 200 optimizer runs
+- 1337 optimizer runs
 - Via-IR compilation for better optimization
 
 ---
-
-## 📈 **Performance Metrics**
-
-Based on mainnet deployment:
-- **Average Gas Cost**: ~150k gas per swap (competitive with DEX routers)
-- **Storage Efficiency**: 80% reduction vs standard mapping approaches  
-- **Query Performance**: Sub-block time for market data retrieval
-- **Uptime**: 100% availability since deployment
-
----
-
-## 🤝 **Contributing**
-
-This is a portfolio showcase of production smart contract development. The codebase demonstrates:
-
-- **Production-grade Solidity**: Best practices and gas optimizations
-- **Comprehensive Testing**: Edge case coverage and fuzz testing
-- **Professional Documentation**: Clear, maintainable code
-- **Real-world Usage**: Proven in live mainnet environment
-
----
-
-## 📜 **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 **About**
-
-Developed by **@supersorbet** - A showcase of advanced Solidity development skills including:
-
-- ✨ Gas-optimized smart contract architecture
-- 🔒 Production security considerations  
-- 📊 Advanced data structures and algorithms
-- 🚀 Successful mainnet deployment and operation
-- 🧪 Comprehensive testing methodologies
-
----
-
-*This project represents months of development, testing, and mainnet operation, demonstrating the ability to build and maintain production-grade DeFi infrastructure.*
