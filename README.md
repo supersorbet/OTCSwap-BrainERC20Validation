@@ -54,7 +54,7 @@ escrow.acceptSwap(swapId);
 // Tokens are automatically exchanged
 ```
 
-### 3. **Market Analytics**
+### 3. **Analytics**
 ```solidity
 // Get real-time market data for any token
 (uint256 buyCount, uint256 sellCount, uint256 lowestSell, 
@@ -70,19 +70,6 @@ escrow.acceptSwap(swapId);
 - **Brain Tokens**: 0% fees (promotes ecosystem growth)
 - **Regular Tokens**: Configurable fee rate (default: 0.69%)
 - **Dynamic Treasury**: Fees support continued development
-
-### Gas Optimizations
-- **Bitmap Storage**: Efficient tracking of processed token IDs
-- **Assembly Optimizations**: Critical paths use inline assembly
-- **Packed Structs**: Minimized storage slots for swap data
-- **Batch Processing**: Reduce transaction costs for bulk operations
-
-### Security Features
-- **Reentrancy Protection**: Comprehensive guards on all external calls
-- **Access Control**: Role-based permissions for administrative functions
-- **Input Validation**: Extensive checks prevent common attack vectors
-- **Emergency Controls**: Circuit breakers for unusual situations
-
 ---
 
 ## 🛠️ **Development Setup**
