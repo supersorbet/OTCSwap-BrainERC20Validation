@@ -1,0 +1,75 @@
+{
+  "name": "OTCSwap-BrainERC20Validation",
+  "version": "1.2.0",
+  "description": "OTC swap escrow system for ERC20 tokens with BasedBrains ecosystem integration (BrainERC20 validation is optional)",
+  "main": "examples/basic_usage.js",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "test:verbose": "forge test -vvv",
+    "test:gas": "forge test --gas-report",
+    "deploy:sepolia": "forge script script/Deploy.s.sol:DeployScript --rpc-url $SEPOLIA_RPC_URL --broadcast --verify",
+    "deploy:mainnet": "forge script script/Deploy.s.sol:DeployScript --rpc-url $MAINNET_RPC_URL --broadcast --verify",
+    "verify": "forge verify-contract",
+    "clean": "forge clean",
+    "fmt": "forge fmt",
+    "install": "forge install",
+    "lint": "solhint 'src/**/*.sol' 'contracts/**/*.sol'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supersorbet/OTCSwap-BrainERC20Validation.git"
+  },
+  "keywords": [
+    "ethereum",
+    "defi",
+    "otc",
+    "swap",
+    "escrow",
+    "solidity",
+    "foundry",
+    "smart-contracts",
+    "basedbains",
+    "uups",
+    "proxy",
+    "upgradeable",
+    "gas-optimized",
+    "production"
+  ],
+  "author": "@supersorbet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supersorbet/OTCSwap-BrainERC20Validation/issues"
+  },
+  "homepage": "https://github.com/supersorbet/OTCSwap-BrainERC20Validation#readme",
+  "devDependencies": {
+    "ethers": "^5.7.2",
+    "solhint": "^4.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-solidity": "^1.2.0"
+  },
+  "peerDependencies": {
+    "ethers": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "contracts/",
+    "src/",
+    "examples/",
+    "docs/",
+    "foundry.toml",
+    "README.md",
+    "LICENSE"
+  ],
+  "config": {
+    "solidity": {
+      "version": "0.8.26",
+      "optimizer": {
+        "enabled": true,
+        "runs": 1337
+      }
+    }
+  }
+} 
