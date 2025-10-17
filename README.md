@@ -1,6 +1,6 @@
-# 🧠 BasedBrains OTC Swap Escrow
+# 🧠 Brains OTC Swap Escrow
 
-> **A gas-optimized Over-The-Counter (OTC) swap system for ERC20s, with added BrainERC20 validation (OPTIONAL). This contract and lib was deployed and mildly used on mainnet, but is now paused until further notice (unrelated issues, nothing to do with the contract. still fully usable)**
+> **A gas-optimized Over-The-Counter (OTC) swap system for ERC20s, with optional BrainERC20 validation. This was mildly used on mainnet, but is now paused until further notice (unrelated issues to the code, nothing to do with the contract.)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.26-blue.svg)](https://docs.soliditylang.org/)
