@@ -8,16 +8,16 @@
 
 ---
 
-- **🎯 Validated Trades**: Support for "Brain tokens" from the BasedBrains NFT ecosystem
+- **🎯 Validated Trades**: Support for "Brain tokens" from the BasedAI Brains NFTs
 - **⚡ Optimized**: Bitmap-based storage, ~80% reduction in tracking operations
-- **🔄 Upgradeable**: UUPS- TO REMOVE AND DEPLOY AS IMMUTABLE, simply remove the UUPS logic and use a base contstructor instead of initializer.
+- **🔄 Upgradeable**: UUPS- simply remove the UUPS logic/libs and use a base contstructor instead of initializer.
 - **📊 Market Analytics**: Price discovery and token market data aggregation
 
 ---
 
 ## 🏗️ **Architecture**
 
-### Core Contracts
+### Core
 
 | Contract | Description | Purpose |
 |----------|-------------|---------|
@@ -26,7 +26,7 @@
 
 ### Key Features
 
-- **🎨 Dual Token Types**: Support for both "Brain tokens" (fee-free, OPTIONAL) and regular ERC20s (w/ configurable fees)
+- **🎨 Dual Token Types**: Support for both "Brain tokens" (fee-free) and regular ERC20s (w/ configurable fees)
 - **⏰ Time-Limited Orders**: Automatic expiration system prevents stale orders
 - **📈  Analytics**: Real-time market data including best bid/ask prices and volume tracking
 - **🔄 Batch Operations**: Efficient bulk processing for token validation
@@ -37,26 +37,26 @@
 
 ### 1. **Swap Creation**
 ```solidity
-// User creates a swap offer
+/// User creates a swap offer
 uint256 swapId = escrow.createSwap(
-    tokenA,      // Token being offered
-    amountA,     // Amount being offered  
-    tokenB,      // Token being requested
-    amountB,     // Amount being requested
-    expiration   // When offer expires
+    tokenA,      /// Token being offered
+    amountA,     /// Amount being offered  
+    tokenB,      /// Token being requested
+    amountB,     /// Amount being requested
+    expiration   /// When offer expires
 );
 ```
 
 ### 2. **Swap Acceptance**
 ```solidity
-// Another user accepts the swap
+/// Another user accepts the swap
 escrow.acceptSwap(swapId);
-// Tokens are automatically exchanged
+/// Tokens automatically exchanged
 ```
 
 ### 3. **Analytics**
 ```solidity
-// Get real-time market data for any token
+/// Get realtime market data for any token
 (uint256 buyCount, uint256 sellCount, uint256 lowestSell, 
  uint256 highestBuy, uint256 totalVolume) = 
     escrow.getTokenMarketData(tokenAddress);
@@ -67,12 +67,11 @@ escrow.acceptSwap(swapId);
 ##  📊 **Advanced Features**
 
 ### Fee Structure
-- **Brain Tokens**: 0% fees (promotes ecosystem growth)
 - **Regular Tokens**: Configurable fee rate (default: 0.69%)
-- **Dynamic Treasury**: Fees support continued development
+- **Dynamic Treasury**: Fees support continued devving
 ---
 
-## 🛠️ **Development Setup**
+## 🛠️ **Dev Setup**
 
 ### Prerequisites
 - [Foundry](https://getfoundry.sh/) installed
@@ -125,14 +124,8 @@ forge test --gas-report
 ### DeFi Applications
 - **OTC Trading Desks**: Large volume trades without slippage
 - **Token Launches**: Fair price discovery for new tokens
-- **Arbitrage**: Cross-exchange price differences
+- **Arb**: Cross-exchange price differences
 - **Portfolio Rebalancing**: Efficient asset swapping
-
-### BasedBrains Ecosystem
-- **Brain Token Trading**: Specialized marketplace for ecosystem tokens
-- **Community Incentives**: Fee-free trading
-- **Price Discovery**: Realtime market data for brain tokens
-
 ---
 
 ## 🔧 **Configuration**
@@ -146,10 +139,10 @@ PRIVATE_KEY=your_private_key
 ETHERSCAN_API_KEY=your_etherscan_key
 ```
 
-### Foundry Configuration
+### Foundry Config
 The project uses optimized compiler settings:
 - Solidity 0.8.26
 - 1337 optimizer runs
-- Via-IR compilation for better optimization
+- Via-IR
 
 ---
